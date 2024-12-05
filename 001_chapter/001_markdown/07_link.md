@@ -1,0 +1,1 @@
+[![бебра](https://via.placeholder.com/100x200)](https://stepik.org/)
