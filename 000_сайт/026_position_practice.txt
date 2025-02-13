@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://sun6-21.userapi.com/s/v1/ig2/EVIaHFvp9V0pFoFOx3Dq683DIQqKM-b_juIadZH29tAe-LH4VBNL3Wf5KzJZ-vr70lO1vnVVgWC3D9ih8ZTOWzhS.jpg?size=100x100&quality=96&crop=280,0,720,720">
+    <title>Прямоугольник и круг</title>
+    <style>
+        body {
+            background-color: rgb(163, 160, 160);
+        }
+
+        @keyframes rotating {
+            from {
+                -ms-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            to {
+                -ms-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .circle:active {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            -webkit-animation: rotating 2s linear infinite;
+            -moz-animation: rotating 2s linear infinite;
+            -ms-animation: rotating 2s linear infinite;
+            -o-animation: rotating 2s linear infinite;
+            animation: rotating 2s linear infinite;
+            background: linear-gradient(to bottom, white 32%, blue 32% 68%, red 68% 100%);
+            z-index: 2;
+        }
+
+        .rectangle:active {
+            width: 360px;
+            height: 210px;
+            background: url(https://media.istockphoto.com/id/1372405230/ru/векторная/украина-россия-государственный-флаг-российской-империи-eps-file-векторный-файл-флага.jpg?s=612x612&w=0&k=20&c=KLMuO9KNcMYqs22nLvVt1bjS0tLywpAWYGFbC_fc5Ns=);
+            background-size: cover;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rectangle"></div>
+    <div class="circle"></div>
+</body>
+
+</html>

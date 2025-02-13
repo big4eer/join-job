@@ -1,0 +1,29 @@
+[id=red] {
+    color: red;
+    font-style: italic;
+}
+
+[id=blue] {
+    color: blue;
+    font-style: italic;
+}
+
+[id=orange] {
+    color: orange;
+    font-style: italic;
+}
+
+[id=brown] {
+    color: brown;
+    font-style: italic;
+}
+
+[id=darkblue] {
+    color: darkblue;
+    font-style: italic;
+}
+
+img {
+    height: 50px;
+    width: 150px;
+}
