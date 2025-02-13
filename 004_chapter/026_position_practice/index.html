@@ -14,19 +14,11 @@
 
         @keyframes rotating {
             from {
-                -ms-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -webkit-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
             }
 
             to {
-                -ms-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -webkit-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
             }
         }
 
@@ -34,41 +26,46 @@
             width: 200px;
             height: 100px;
             background-color: blue;
+            position: absolute;
             top: 50%;
             left: 50%;
-            position: absolute;
             transform: translate(-50%, -50%);
             max-width: 100%;
+            transition: all 0.3s ease-in-out;
         }
 
         .circle {
             width: 80px;
             height: 80px;
             background-color: aqua;
-            top: 50%;
-            left: 50%;
             border-radius: 50%;
             position: absolute;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             max-width: 100%;
+            transition: all 0.3s ease-in-out;
         }
 
         .circle:active {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
             -webkit-animation: rotating 2s linear infinite;
             -moz-animation: rotating 2s linear infinite;
             -ms-animation: rotating 2s linear infinite;
             -o-animation: rotating 2s linear infinite;
             animation: rotating 2s linear infinite;
             background: linear-gradient(to bottom, white 32%, blue 32% 68%, red 68% 100%);
+            z-index: 2;
         }
 
         .rectangle:active {
             width: 360px;
             height: 210px;
             background: url(https://media.istockphoto.com/id/1372405230/ru/векторная/украина-россия-государственный-флаг-российской-империи-eps-file-векторный-файл-флага.jpg?s=612x612&w=0&k=20&c=KLMuO9KNcMYqs22nLvVt1bjS0tLywpAWYGFbC_fc5Ns=);
-            background-size: 100%;
+            background-size: cover;
             z-index: 2;
         }
     </style>
