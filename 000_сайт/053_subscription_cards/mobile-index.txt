@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+    <link rel="icon" href="./favicon.jpg">
+    <title>Подписка на закрытый канал</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #b6f6ff;
+        }
+
+        main {
+            width: 100%;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #c9f0ff;
+            border-radius: 15px;
+            width: 350px;
+            height: 350px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .card ul {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .card li {
+            margin: 8px 0;
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .button {
+            text-decoration: none;
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #40a2fd;
+            color: #fff;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #2874b3;
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="cards-container">
+            <article class="card">
+                <h2>Базовая&nbsp;подписка</h2>
+                <ul>
+                    <li><span>✅</span> Бонус 1</li>
+                    <li><span>❎</span> Бонус 2</li>
+                    <li><span>❎</span> Бонус 3</li>
+                </ul>
+                <div class="price">&#8381; 199/месяц</div>
+                <a href="#" class="button">Подписаться</a>
+            </article>
+
+            <article class="card">
+                <h2>Продвинутая&nbsp;подписка</h2>
+                <ul>
+                    <li><span>✅</span> Бонус 1</li>
+                    <li><span>✅</span> Бонус 2</li>
+                    <li><span>❎</span> Бонус 3</li>
+                </ul>
+                <div class="price">&#8381; 299/месяц</div>
+                <a href="#" class="button">Подписаться</a>
+            </article>
+
+            <article class="card">
+                <h2>Премиум&nbsp;подписка</h2>
+                <ul>
+                    <li><span>✅</span> Бонус 1</li>
+                    <li><span>✅</span> Бонус 2</li>
+                    <li><span>✅</span> Бонус 3</li>
+                </ul>
+                <div class="price">&#8381; 599/месяц</div>
+                <a href="#" class="button">Подписаться</a>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
